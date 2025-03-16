@@ -20,6 +20,14 @@
 
   virtualisation.docker.enable = true;
 
+  programs.virt-manager.enable = true;
+
+  users.groups.libvirtd.members = ["jan"];
+
+  virtualisation.libvirtd.enable = true;
+
+  virtualisation.spiceUSBRedirection.enable = true;
+
 
   users.defaultUserShell = pkgs.fish;
 
@@ -109,6 +117,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+
   neovim
   fish
   oh-my-fish
@@ -121,18 +130,16 @@
   #vscode
   git
   #ripgrep-all
-
+  #pika-backup
 	
   # k8s 
-  docker
-  docker-compose
+  #docker
+  #docker-compose
   #podman
   #podman-compose
   #kubectl
   #k9s
   #kubectx
-  
-
  ];
 
  services.xserver.excludePackages = with pkgs; [
@@ -162,3 +169,4 @@ environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome.gnome-music ni
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
+
