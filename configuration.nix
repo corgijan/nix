@@ -15,23 +15,22 @@
   boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = true;
 
-  programs.fish.enable = true;
-  services.flatpak.enable = true;
-
-  virtualisation.docker.enable = true;
-
-  programs.virt-manager.enable = true;
-
   users.groups.libvirtd.members = ["jan"];
 
-  virtualisation.libvirtd.enable = true;
+  services.flatpak.enable = true;
 
+  programs.virt-manager.enable = true;
+  programs.tailscale.enable = true;
+  programs.fish.enable = true;
+
+  virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.docker.enable = true;
 
 
   users.defaultUserShell = pkgs.fish;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-thinkpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -132,7 +131,7 @@
   #ripgrep-all
   #pika-backup
 	
-  # k8s 
+  #k8s 
   #docker
   #docker-compose
   #podman
@@ -142,6 +141,20 @@
   #kubectx
  ];
 
+  systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
+      flatpak install flathub com.spotify.Client -y
+      # flatpak install flathub org.gnome.World.PikaBackup -y
+      # flatpak install flathub app.zen_browser.zen -y
+      # flatpak install flathub com.discordapp.Discord -y
+      # flatpak install flathub org.telegram.desktop -y
+      # flatpak install flathub org.signal.Signal -y
+    '';
+  };
+  
  services.xserver.excludePackages = with pkgs; [
  	xterm
  ];
@@ -156,7 +169,6 @@ environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome.gnome-music ni
   # };
 
   # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
