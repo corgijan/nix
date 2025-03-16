@@ -18,9 +18,9 @@
   users.groups.libvirtd.members = ["jan"];
 
   services.flatpak.enable = true;
+  services.tailscale.enable = true;
 
   programs.virt-manager.enable = true;
-  programs.tailscale.enable = true;
   programs.fish.enable = true;
 
   virtualisation.libvirtd.enable = true;
@@ -116,7 +116,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-
   neovim
   fish
   oh-my-fish
@@ -143,7 +142,9 @@
 
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
-    path = [ pkgs.flatpak ];
+    path = with pkgs;[
+    flatpak 
+    ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
       flatpak install flathub com.spotify.Client -y
@@ -158,7 +159,7 @@
  services.xserver.excludePackages = with pkgs; [
  	xterm
  ];
-environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome.gnome-music nixos-render-docs pantheon.epiphany ];# configuration.nix
+environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-music nixos-render-docs pantheon.epiphany ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -177,7 +178,6 @@ environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome.gnome-music ni
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
