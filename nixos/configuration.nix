@@ -130,6 +130,7 @@
   #jetbrains.idea-community-src
   #vscode
   git
+  home-manager
   #ripgrep-all
   #pika-backup
 	

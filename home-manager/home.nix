@@ -16,6 +16,19 @@
     # ./nvim.nix
   ];
 
+   home.sessionVariables = {
+   	EDITOR = "nvim";
+   	TEST = "JAAAN";
+   };
+
+   dconf.settings = {
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+        picture-uri-dark = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
+        picture-uri = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
+        };
+    };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
