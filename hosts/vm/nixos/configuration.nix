@@ -8,8 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hw.nix
-      ./bootloader.nix
     ];
+
+  # Bootloader.
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.useOSProber = true;
 
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

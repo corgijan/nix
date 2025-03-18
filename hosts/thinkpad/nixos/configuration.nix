@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hw.nix
       ./bootloader.nix
+      ./packages.nix
     ];
 
 
@@ -106,62 +107,6 @@
   };
 
   users.extraGroups.docker.members = [ "jan" ];
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  neovim
-  fish
-  oh-my-fish
-  curl
-  python3
-  uv
-  #jetbrains.rust-rover
-  #jetbrains.idea-ultimate
-  #jetbrains.idea-community-src
-  #vscode
-  git
-  home-manager
-  #ripgrep-all
-  #pika-backup
-	
-  #k8s 
-  docker
-  distrobox
-  #docker-compose
-  #podman
-  #podman-compose
-  #kubectl
-  #k9s
-  #kubectx
- ];
-
-  systemd.services.flatpak-repo = {
-    wantedBy = [ "multi-user.target" ];
-    path = with pkgs;[
-    flatpak 
-    ];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
-      flatpak install flathub com.spotify.Client -y
-      # flatpak install flathub org.gnome.World.PikaBackup -y
-      # flatpak install flathub app.zen_browser.zen -y
-      # flatpak install flathub com.discordapp.Discord -y
-      # flatpak install flathub org.telegram.desktop -y
-      # flatpak install flathub org.signal.Signal -y
-    '';
-  };
-  
- services.xserver.excludePackages = with pkgs; [
- 	xterm
- ];
-environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-music nixos-render-docs pantheon.epiphany ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
