@@ -37,11 +37,16 @@
    	EDITOR = "nvim";
    };
 
+   home.file = { 
+ 	#"./fish/config.fish".source = "${pkgs.fish-conf}/config.fish";
+   };
+
+
    dconf.settings = {
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-        picture-uri-dark = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
         picture-uri = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
+        picture-uri-dark = "https://images.unsplash.com/photo-1439189614644-ff891ff78aa8?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         };
 
  "org/gnome/desktop/wm/preferences" = {
