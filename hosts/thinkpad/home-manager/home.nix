@@ -16,23 +16,6 @@
     # ./nvim.nix
   ];
 
-    programs.git = {
-    userName = "corgijan";
-    userEmail = "jan.vaorin@tu-dortmund.de";
-    aliases = {
-      undo = "reset HEAD~1 --mixed";
-      amend = "commit -a --amend";
-    };
-    extraConfig = {
-      pull = {
-        rebase = true;
-      };
-      branch = {
-        autosetupmerge = true;
-      };
-    };
-  };
-
    home.sessionVariables = {
    	EDITOR = "nvim";
    };
@@ -46,7 +29,7 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
         picture-uri = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
-        picture-uri-dark = "https://images.unsplash.com/photo-1439189614644-ff891ff78aa8?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        picture-uri-dark = "https://unsplash.com/photos/aerial-photography-of-trees-on-hills-acJmkKwEMR4";
         };
 
  "org/gnome/desktop/wm/preferences" = {
@@ -136,7 +119,24 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+
+    programs.git = {
+    enable = true;
+    userName = "corgijan";
+    userEmail = "jan.vaorin@tu-dortmund.de";
+    aliases = {
+      undo = "reset HEAD~1 --mixed";
+      amend = "commit -a --amend";
+    };
+    extraConfig = {
+      pull = {
+        rebase = true;
+      };
+      branch = {
+        autosetupmerge = true;
+      };
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
