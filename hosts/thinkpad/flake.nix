@@ -6,6 +6,9 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     # More under: https://nixos-and-flakes.thiscute.world/nixos-with-flakes/downgrade-or-upgrade-packages
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-zen.url = "github:0xc000022070/zen-browser-flake";
+    flake-zen.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.11";
@@ -18,6 +21,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    flake-zen,
     ...
   } @ inputs: let
     inherit (self) outputs;

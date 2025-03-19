@@ -3,7 +3,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -15,7 +15,9 @@
   firefox
   fish
   oh-my-fish
+  trash-cli
   curl
+  inputs.flake-zen.packages."x86_64-linux".default
   python3
   uv
   jetbrains.rust-rover
@@ -26,6 +28,7 @@
   home-manager
   xclip
   ripgrep-all
+  tailscale
 	
   #k8s 
   docker
@@ -41,6 +44,7 @@
   spotify
   telegram-desktop
   signal-desktop
+  #discord (installed via flatpak)
  ];
 
   systemd.services.flatpak-repo = {
@@ -50,9 +54,6 @@
     ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
-      flatpak install flathub app.zen_browser.zen -y
-      for i in {1..9}; do gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>$i']" ; done
-      for i in {1..9}; do gsettings set "org.gnome.desktop.wm.keybindings" "move-to-workspace-$i" "['<Super><Shift>$i']" ; done
     '';
   };
   

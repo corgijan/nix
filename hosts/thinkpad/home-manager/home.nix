@@ -21,7 +21,7 @@
    };
 
    home.file = { 
- 	#"./fish/config.fish".source = "${pkgs.fish-conf}/config.fish";
+   ".config/fish/config.fish" = { text = (builtins.readFile ./fish/config.fish); executable = false; };
    };
 
 
@@ -49,7 +49,7 @@
     };
     "org/gnome/shell" = {
       favorite-apps = [
-        "firefox.desktop"
+	"app.zen_browser.zen.desktop"
         "org.gnome.Console.desktop"
         "org.gnome.Nautilus.desktop"
 	"blur-my-shell@aunetx"
