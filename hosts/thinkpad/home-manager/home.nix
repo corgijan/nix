@@ -42,7 +42,9 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
-	""
+	"fullscreen-to-empty-workspace2@corgijan.dev"
+	"caffeine@patapon.info"
+	"blur-my-shell@aunetx"
       ];
     };
     "org/gnome/shell" = {
@@ -51,8 +53,6 @@
         "org.gnome.Console.desktop"
         "org.gnome.Nautilus.desktop"
 	"blur-my-shell@aunetx"
-	"fullscreen-to-empty-workspace2@corgijan.dev"
-	"caffeine@patapon.info"
       ];
     };
     "org/gnome/desktop/interface" = {
