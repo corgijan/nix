@@ -28,8 +28,8 @@
    dconf.settings = {
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-        picture-uri = "https://images.unsplash.com/photo-1552083375-1447ce886485?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwd2FsbHBhcGVyJTIwZnVsbCUyMGhkfGVufDB8fDB8fHww";
-        picture-uri-dark = "https://images.unsplash.com/photo-1507720708252-1ddeb1dbff34?q=80&w=1867&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        picture-uri = "file:///home/jan/Documents/pexels-picjumbo-com-55570-225229.jpg";
+        picture-uri-dark = "file:///home/jan/Documents/pexels-timmossholder-2336117.jpg";
         };
 
  "org/gnome/desktop/wm/preferences" = {
