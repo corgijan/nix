@@ -54,10 +54,14 @@
         "org.gnome.Nautilus.desktop"
 	"com.mitchellh.ghostty.desktop"
       ];
+
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+    };
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
     };
     };
 
