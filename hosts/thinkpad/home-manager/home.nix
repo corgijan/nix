@@ -50,9 +50,8 @@
     "org/gnome/shell" = {
       favorite-apps = [
 	"app.zen_browser.zen.desktop"
-        "org.gnome.Console.desktop"
         "org.gnome.Nautilus.desktop"
-	"blur-my-shell@aunetx"
+	"com.mitchellh.ghostty.desktop"
       ];
     };
     "org/gnome/desktop/interface" = {

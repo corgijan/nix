@@ -44,7 +44,8 @@
   spotify
   telegram-desktop
   signal-desktop
-  #discord (installed via flatpak)
+  discord
+  ghostty
  ];
 
   systemd.services.flatpak-repo = {
@@ -60,7 +61,7 @@
  services.xserver.excludePackages = with pkgs; [
  	xterm
  ];
-environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-music nixos-render-docs pantheon.epiphany yelp gnome-clocks geary gnome-contacts];
+environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-music nixos-render-docs pantheon.epiphany yelp gnome-clocks geary gnome-contacts gnome-console];
 }
 
 
