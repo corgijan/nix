@@ -21,8 +21,8 @@
    };
 
    home.file = { 
-   ".config/fish/config.fish" = { text = (builtins.readFile ../../../fish/config.fish); executable = false; };
-   ".config/ghostty/config" = { text = (builtins.readFile ../../../ghostty/config); executable = false; };
+   ".config/fish/config.fish" = { text = (builtins.readFile ./../../../fish/config.fish); executable = false; };
+   ".config/ghostty/config" = { text = (builtins.readFile ./../../../ghostty/config); executable = false; };
    };
 
 
