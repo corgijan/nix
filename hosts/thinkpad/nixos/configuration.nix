@@ -27,9 +27,6 @@
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.docker.enable = true;
 
-
-  users.defaultUserShell = pkgs.fish;
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

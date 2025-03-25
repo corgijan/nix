@@ -21,8 +21,8 @@
    };
 
    home.file = { 
-   ".config/fish/config.fish" = { text = (builtins.readFile ./fish/config.fish); executable = false; };
-   ".config/ghostty/config" = { text = (builtins.readFile ./ghostty/config); executable = false; };
+   ".config/fish/config.fish" = { text = (builtins.readFile ../../../fish/config.fish); executable = false; };
+   ".config/ghostty/config" = { text = (builtins.readFile ../../../ghostty/config); executable = false; };
    };
 
 
@@ -33,13 +33,12 @@
         picture-uri-dark = "file:///home/jan/Documents/pexels-timmossholder-2336117.jpg";
         };
 
- "org/gnome/desktop/wm/preferences" = {
-      button-layout = "close:";
-    };
+ 	"org/gnome/desktop/wm/preferences" = {
+      		button-layout = "close:";
+    	};
 	
     "org/gnome/shell" = {
       disable-user-extensions = false;
-
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
@@ -56,10 +55,12 @@
       ];
 
     };
+
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
     };
+
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
     };

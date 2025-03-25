@@ -1,3 +1,4 @@
+
 export EDITOR="/home/jan/.local/bin/lvim"
 
 set fish_greeting "Its fishy here ...."
@@ -474,13 +475,6 @@ function prompt_vi_mode -d 'vi mode status indicator'
         set_color -b $color_vi_mode_visual $color_vi_mode_indicator
         echo " V "
     end
-end
-
-function fish_right_prompt -d 'Prints right prompt'
-  if not test "$fish_key_bindings" = "fish_default_key_bindings"
-    prompt_vi_mode
-    set_color normal
-  end
 end
 
 

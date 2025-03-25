@@ -14,9 +14,12 @@
   gnome-extension-manager
   firefox
   fish
+  pkgs.fishPlugins.z
   oh-my-fish
   trash-cli
   curl
+  gcc
+  zig
   inputs.flake-zen.packages."x86_64-linux".default
   python3
   uv
