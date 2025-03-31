@@ -15,6 +15,7 @@
   firefox
   fish
   pkgs.fishPlugins.z
+  keepassxc
   oh-my-fish
   trash-cli
   curl
@@ -24,7 +25,7 @@
   python3
   uv
   jetbrains.rust-rover
-  jetbrains.idea-community-bin
+  jetbrains.idea-ultimate
   jetbrains.pycharm-community-bin
   vscode
   git
