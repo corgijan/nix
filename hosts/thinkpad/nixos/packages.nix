@@ -34,6 +34,9 @@
   ripgrep-all
   tailscale
 	
+	#addon daily driver
+  vdhcoapp
+
   #k8s 
   docker
   distrobox
