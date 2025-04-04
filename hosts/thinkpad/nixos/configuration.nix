@@ -7,10 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hw.nix
+      ./hw_vom.nix
       ./bootloader.nix
-      ./packages.nix
-      ./desktop_packages.nix
+      ../../../modules/packages.nix
+      ../../../modules/desktop_packages.nix
     ];
 
   basepkgs = {
