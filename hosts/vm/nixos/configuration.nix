@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hw.nix
+      ../../../modules/barebones_packages.nix
     ];
 
   # Bootloader.
@@ -20,18 +21,6 @@
 
   users.groups.libvirtd.members = ["jan"];
 
-  services.flatpak.enable = true;
-  services.tailscale.enable = true;
-
-  programs.virt-manager.enable = true;
-  programs.fish.enable = true;
-
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.docker.enable = true;
-
-
-  users.defaultUserShell = pkgs.fish;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -110,7 +99,7 @@
   };
 
   users.extraGroups.docker.members = [ "jan" ];
-  # Install firefox.
+
   programs.firefox.enable = true;
 
   # Allow unfree packages
@@ -121,28 +110,6 @@
   environment.systemPackages = with pkgs; [
   neovim
   fish
-  oh-my-fish
-  curl
-  python3
-  uv
-  #jetbrains.rust-rover
-  #jetbrains.idea-ultimate
-  #jetbrains.idea-community-src
-  #vscode
-  git
-  home-manager
-  #ripgrep-all
-  #pika-backup
-	
-  #k8s 
-  docker
-  distrobox
-  #docker-compose
-  #podman
-  #podman-compose
-  #kubectl
-  #k9s
-  #kubectx
  ];
 
   systemd.services.flatpak-repo = {
