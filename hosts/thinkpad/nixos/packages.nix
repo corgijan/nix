@@ -12,8 +12,8 @@ in {
       type = types.str;
       default = "world";
     };
+    tryk = mkEnableOption true;
   };
-
 
 config = mkIf cfg.enable {
   environment.systemPackages = with pkgs; [
@@ -39,5 +39,5 @@ config = mkIf cfg.enable {
   kubectx
   k9s
  ];
-  };
+};
 }
