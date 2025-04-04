@@ -10,8 +10,20 @@
       ./hw.nix
       ./bootloader.nix
       ./packages.nix
+      ./desktop_packages.nix
     ];
 
+  basepkgs = {
+    enable = true;
+    greeter = "Bob";
+  };
+
+  desktoppkgs = {
+    enable = true;
+    greeter = "Bob";
+  };
+
+  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
