@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hw_vom.nix
+      ./hw.nix
       ./bootloader.nix
       ../../../modules/packages.nix
       ../../../modules/desktop_packages.nix
