@@ -28,6 +28,9 @@ config = mkIf cfg.enable {
   xclip
   ripgrep-all
   tailscale
+  ghostty
+  discord
+  pika-backup
  ];
 
   systemd.services.flatpak-repo = {

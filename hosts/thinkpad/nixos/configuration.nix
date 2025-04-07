@@ -15,12 +15,10 @@
 
   basepkgs = {
     enable = true;
-    greeter = "Bob";
   };
 
   desktoppkgs = {
     enable = true;
-    greeter = "Bob";
   };
 
   nixpkgs.config.allowUnfree = true;

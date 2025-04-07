@@ -124,7 +124,6 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-
     programs.git = {
     enable = true;
     userName = "corgijan";
@@ -134,6 +133,7 @@
       amend = "commit -a --amend";
     };
     extraConfig = {
+      init.defaultBranch = "development";
       pull = {
         rebase = true;
       };
