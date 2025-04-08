@@ -31,6 +31,8 @@ config = mkIf cfg.enable {
   ghostty
   discord
   pika-backup
+  opentofu
+  terragrunt
  ];
 
   systemd.services.flatpak-repo = {
