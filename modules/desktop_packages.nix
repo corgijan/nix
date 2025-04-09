@@ -33,6 +33,7 @@ config = mkIf cfg.enable {
   pika-backup
   opentofu
   terragrunt
+  talosctl
  ];
 
   systemd.services.flatpak-repo = {
