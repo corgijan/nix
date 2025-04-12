@@ -1,5 +1,5 @@
 
-export EDITOR="/home/jan/.local/bin/lvim"
+export EDITOR="nvim"
 
 set fish_greeting "Its fishy here ...."
 alias rm "trash"

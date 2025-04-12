@@ -34,6 +34,9 @@ config = mkIf cfg.enable {
   opentofu
   terragrunt
   talosctl
+  ardour
+  ranger
+  signal-desktop
  ];
 
   systemd.services.flatpak-repo = {
