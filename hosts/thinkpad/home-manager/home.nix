@@ -30,7 +30,7 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
         picture-uri = "file:///home/jan/Documents/pexels-picjumbo-com-55570-225229.jpg";
-        picture-uri-dark = "file:///home/jan/Documents/pexels-timmossholder-2336117.jpg";
+        picture-uri-dark ="https://images.unsplash.com/photo-1475522003475-eb5f96f1f930?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ;
         };
 
  	"org/gnome/desktop/wm/preferences" = {
