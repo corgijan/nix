@@ -1,3 +1,8 @@
+# Check if running on NixOS, abort if not
+if not test -f /etc/os-release; or not string match -q "*ID=nixos*" (cat /etc/os-release)
+    echo "This configuration is for NixOS only. Aborting."
+    return 1
+end
 
 export EDITOR="nvim"
 
