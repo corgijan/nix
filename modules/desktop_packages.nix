@@ -20,9 +20,8 @@ config = mkIf cfg.enable {
   gnome-extension-manager
   firefox
   inputs.flake-zen.packages."x86_64-linux".default
-  jetbrains.rust-rover
   jetbrains.idea-ultimate
-  jetbrains.pycharm-community-bin
+  (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
   vscode
   home-manager
   xclip

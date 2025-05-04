@@ -3,7 +3,7 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # More under: https://nixos-and-flakes.thiscute.world/nixos-with-flakes/downgrade-or-upgrade-packages
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-zen.url = "github:0xc000022070/zen-browser-flake";
