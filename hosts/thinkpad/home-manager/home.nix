@@ -25,13 +25,12 @@
    ".config/ghostty/config" = { text = (builtins.readFile ../../../configs/ghostty/config); executable = false; };
    };
 
-
    dconf.settings = {
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-        picture-uri = "file:///home/jan/Documents/pexels-picjumbo-com-55570-225229.jpg";
-        picture-uri-dark ="https://images.unsplash.com/photo-1475522003475-eb5f96f1f930?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ;
-        };
+        picture-uri = "file:///home/jan/nix/images/pexels-picjumbo-com-55570-225229.jpg";
+        picture-uri-dark = "file:///home/jan/nix/images/pexels-picjumbo-com-55570-225229.jpg";
+      };
 
  	"org/gnome/desktop/wm/preferences" = {
       		button-layout = "close:";
@@ -42,16 +41,17 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
-	"fullscreen-to-empty-workspace2@corgijan.dev"
-	"caffeine@patapon.info"
-	"blur-my-shell@aunetx"
+	      "fullscreen-to-empty-workspace2@corgijan.dev"
+	      "caffeine@patapon.info"
+	      "blur-my-shell@aunetx"
       ];
     };
+
     "org/gnome/shell" = {
       favorite-apps = [
-	"app.zen_browser.zen.desktop"
+	      "app.zen_browser.zen.desktop"
         "org.gnome.Nautilus.desktop"
-	"com.mitchellh.ghostty.desktop"
+	      "com.mitchellh.ghostty.desktop"
       ];
 
     };
@@ -59,6 +59,7 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+      enable-animations = false; 
     };
 
     "org/gnome/mutter" = {
@@ -147,6 +148,6 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 }
 
