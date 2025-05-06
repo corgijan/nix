@@ -44,6 +44,7 @@
 	      "fullscreen-to-empty-workspace2@corgijan.dev"
 	      "caffeine@patapon.info"
 	      "blur-my-shell@aunetx"
+	      "clipboard-history@alexsaveau.dev"
       ];
     };
 
