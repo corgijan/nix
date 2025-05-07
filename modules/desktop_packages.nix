@@ -20,6 +20,7 @@ config = mkIf cfg.enable {
   gnome-extension-manager
   firefox
   inputs.flake-zen.packages."x86_64-linux".default
+  jetbrains.rust-rover
   jetbrains.idea-ultimate
   (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
   vscode
@@ -36,6 +37,7 @@ config = mkIf cfg.enable {
   ardour
   ranger
   signal-desktop
+  awscli2
  ];
 
   systemd.services.flatpak-repo = {
