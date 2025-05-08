@@ -38,6 +38,8 @@ config = mkIf cfg.enable {
   ranger
   signal-desktop
   awscli2
+  vdhcoapp
+  spotify
  ];
 
   systemd.services.flatpak-repo = {
