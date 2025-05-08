@@ -28,8 +28,8 @@
    dconf.settings = {
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-        picture-uri = "file:///home/jan/nix/images/pexels-picjumbo-com-55570-225229.jpg";
-        picture-uri-dark = "file:///home/jan/nix/images/pexels-picjumbo-com-55570-225229.jpg";
+        picture-uri = "file:///home/jan/nix/images/yosemite.jpg";
+        picture-uri-dark = "file:///home/jan/nix/images/yosemite.jpg";
       };
 
  	"org/gnome/desktop/wm/preferences" = {
