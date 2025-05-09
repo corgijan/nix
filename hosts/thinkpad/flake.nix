@@ -23,16 +23,6 @@
     flake-zen,
     ...
   } @ inputs: let
-    pkgs = import nixpkgs {
-      config = {
-        allowUnfree=true;
-      };
-    };
-    pkgs-unstable = import nixpkgs {
-      config = {
-        allowUnfree=true;
-      };
-    };
     inherit (self) outputs;
   in {
     # NixOS configuration entrypoint
@@ -40,9 +30,17 @@
     nixosConfigurations = {
       # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        system = "x86_64-linux";
+        specialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+        inherit inputs outputs;
+        };
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [./nixos/configuration.nix
+        ];
       };
     };
 
