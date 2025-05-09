@@ -30,7 +30,6 @@
     nixosConfigurations = {
       # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = {
         pkgs-unstable = import nixpkgs-unstable {
             system = "x86_64-linux";
