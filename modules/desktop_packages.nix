@@ -20,12 +20,8 @@ config = mkIf cfg.enable {
   gnome-extension-manager
   firefox
   inputs.flake-zen.packages."x86_64-linux".default
-  jetbrains.rust-rover
-  jetbrains.idea-ultimate
-  (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
   vscode
   home-manager
-  xclip
   ripgrep-all
   tailscale
   ghostty
@@ -39,7 +35,6 @@ config = mkIf cfg.enable {
   signal-desktop
   awscli2
   vdhcoapp
-  spotify
  ];
 
   systemd.services.flatpak-repo = {

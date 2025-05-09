@@ -30,14 +30,13 @@ config = mkIf cfg.enable {
   home-manager
   ripgrep-all
   tailscale
-
   #k8s 
   docker
   distrobox
   docker-compose
   kubectl
   kubectx
-  k9s
+  ripgrep
  ];
 };
 }
