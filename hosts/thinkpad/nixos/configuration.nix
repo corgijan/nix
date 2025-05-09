@@ -23,6 +23,11 @@
   
  environment.systemPackages = with pkgs-unstable; [
     htop # Example package from unstable branch
+    k9s
+    jetbrains.rust-rover
+    jetbrains.idea-ultimate
+    (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
+    spotify
   ];
 
   nixpkgs.config.allowUnfree = true;
