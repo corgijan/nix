@@ -35,6 +35,8 @@ config = mkIf cfg.enable {
   signal-desktop
   awscli2
   vdhcoapp
+  wl-clipboard
+  obsidian
  ];
 
   systemd.services.flatpak-repo = {
