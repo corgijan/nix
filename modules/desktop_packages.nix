@@ -37,6 +37,7 @@ config = mkIf cfg.enable {
   vdhcoapp
   wl-clipboard
   obsidian
+  zed-editor
  ];
 
   systemd.services.flatpak-repo = {

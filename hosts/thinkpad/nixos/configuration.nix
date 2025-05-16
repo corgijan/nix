@@ -28,6 +28,7 @@
     jetbrains.idea-ultimate
     (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
     spotify
+    jetbrains-mono
   ];
   programs.nix-ld.enable = true;
 
