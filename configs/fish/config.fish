@@ -9,6 +9,7 @@ export EDITOR="nvim"
 set fish_greeting "Its fishy here ...."
 alias rm "trash"
 alias v "vi"
+alias r "ranger"
 alias g "grep"ää
 set --universal pure_symbol_git_dirty " [DIRTY]"
 
