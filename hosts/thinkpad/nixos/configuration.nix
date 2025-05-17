@@ -20,7 +20,7 @@
     enable = true;
   };
 
-  
+
  environment.systemPackages = with pkgs-unstable; [
     htop # Example package from unstable branch
     k9s
@@ -29,6 +29,7 @@
     (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
     spotify
     jetbrains-mono
+    #zed-editor-fhs
   ];
   programs.nix-ld.enable = true;
 
@@ -161,4 +162,3 @@
   # networking.firewall.enable = false;
   system.stateVersion = "24.11";
 }
-
