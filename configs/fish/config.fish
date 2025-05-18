@@ -482,41 +482,41 @@ function prompt_vi_mode -d 'vi mode status indicator'
         echo " V "
     end
 end
+# Catppuccin Macchiato for Fish shell
 
-
-set -U fish_color_normal CBCCC6
-set -U fish_color_command 5CCFE6
-set -U fish_color_quote BAE67E
-set -U fish_color_redirection D4BFFF
-set -U fish_color_end F29E74
-set -U fish_color_error FF3333
-set -U fish_color_param CBCCC6
-set -U fish_color_comment 5C6773
-set -U fish_color_match F28779
-set -U fish_color_selection --background=FFCC66
-set -U fish_color_search_match --background=FFCC66
+set -U fish_color_normal c6d0f5
+set -U fish_color_command 8aadf4
+set -U fish_color_quote a6da95
+set -U fish_color_redirection f5bde6
+set -U fish_color_end f5a97f
+set -U fish_color_error ed8796
+set -U fish_color_param c6a0f6
+set -U fish_color_comment 8087a2
+set -U fish_color_match f0c6c6
+set -U fish_color_selection --background=363a4f
+set -U fish_color_search_match --background=494d64
 set -U fish_color_history_current --bold
-set -U fish_color_operator FFCC66
-set -U fish_color_escape 95E6CB
-set -U fish_color_cwd 73D0FF
-set -U fish_color_cwd_root red
+set -U fish_color_operator f5a97f
+set -U fish_color_escape 8bd5ca
+set -U fish_color_cwd 8aadf4
+set -U fish_color_cwd_root ed8796
 set -U fish_color_valid_path --underline
-set -U fish_color_autosuggestion 707A8C
-set -U fish_color_user brgreen
-set -U fish_color_host normal
+set -U fish_color_autosuggestion 6e738d
+set -U fish_color_user a6da95
+set -U fish_color_host f4dbd6
 set -U fish_color_cancel --reverse
-set -U fish_pager_color_prefix normal --bold --underline
-set -U fish_pager_color_progress brwhite --background=cyan
-set -U fish_pager_color_completion normal
-set -U fish_pager_color_description B3A06D
-set -U fish_pager_color_selected_background --background=FFCC66
-set -U fish_pager_color_selected_completion 
-set -U fish_pager_color_secondary_description 
-set -U fish_color_option 
-set -U fish_pager_color_selected_prefix 
-set -U fish_pager_color_secondary_background 
-set -U fish_color_keyword 
-set -U fish_pager_color_secondary_completion 
-set -U fish_pager_color_selected_description 
-set -U fish_pager_color_secondary_prefix 
-set -U fish_pager_color_background 
+set -U fish_pager_color_prefix 8aadf4 --bold --underline
+set -U fish_pager_color_progress c6a0f6 --background=494d64
+set -U fish_pager_color_completion c6d0f5
+set -U fish_pager_color_description 8bd5ca
+set -U fish_pager_color_selected_background --background=363a4f
+set -U fish_pager_color_selected_completion f5a97f
+set -U fish_pager_color_secondary_description 8087a2
+set -U fish_color_option a6da95
+set -U fish_pager_color_selected_prefix f5bde6
+set -U fish_pager_color_secondary_background --background=232634
+set -U fish_color_keyword c6a0f6
+set -U fish_pager_color_secondary_completion 8aadf4
+set -U fish_pager_color_selected_description f4dbd6
+set -U fish_pager_color_secondary_prefix 8bd5ca
+set -U fish_color_background 24273a
