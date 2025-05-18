@@ -484,39 +484,3 @@ function prompt_vi_mode -d 'vi mode status indicator'
 end
 # Catppuccin Macchiato for Fish shell
 
-set -U fish_color_normal c6d0f5
-set -U fish_color_command 8aadf4
-set -U fish_color_quote a6da95
-set -U fish_color_redirection f5bde6
-set -U fish_color_end f5a97f
-set -U fish_color_error ed8796
-set -U fish_color_param c6a0f6
-set -U fish_color_comment 8087a2
-set -U fish_color_match f0c6c6
-set -U fish_color_selection --background=363a4f
-set -U fish_color_search_match --background=494d64
-set -U fish_color_history_current --bold
-set -U fish_color_operator f5a97f
-set -U fish_color_escape 8bd5ca
-set -U fish_color_cwd 8aadf4
-set -U fish_color_cwd_root ed8796
-set -U fish_color_valid_path --underline
-set -U fish_color_autosuggestion 6e738d
-set -U fish_color_user a6da95
-set -U fish_color_host f4dbd6
-set -U fish_color_cancel --reverse
-set -U fish_pager_color_prefix 8aadf4 --bold --underline
-set -U fish_pager_color_progress c6a0f6 --background=494d64
-set -U fish_pager_color_completion c6d0f5
-set -U fish_pager_color_description 8bd5ca
-set -U fish_pager_color_selected_background --background=363a4f
-set -U fish_pager_color_selected_completion f5a97f
-set -U fish_pager_color_secondary_description 8087a2
-set -U fish_color_option a6da95
-set -U fish_pager_color_selected_prefix f5bde6
-set -U fish_pager_color_secondary_background --background=232634
-set -U fish_color_keyword c6a0f6
-set -U fish_pager_color_secondary_completion 8aadf4
-set -U fish_pager_color_selected_description f4dbd6
-set -U fish_pager_color_secondary_prefix 8bd5ca
-set -U fish_color_background 24273a
