@@ -17,7 +17,6 @@ in {
 
 config = mkIf cfg.enable {
   environment.systemPackages = with pkgs; [
-  neovim
   fish
   pkgs.fishPlugins.z
   oh-my-fish
@@ -37,6 +36,13 @@ config = mkIf cfg.enable {
   kubectl
   kubectx
   ripgrep
+  #nvim
+  neovim
+  typescript-language-server
+  javascript-typescript-langserver
+  yaml-language-server
+  java-language-server
+  bash-language-server
  ];
 };
 }

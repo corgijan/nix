@@ -10,7 +10,7 @@ set fish_greeting "Its fishy here ...."
 alias rm "trash"
 alias v "vi"
 alias r "ranger"
-alias g "grep"ää
+alias g "grep"
 set --universal pure_symbol_git_dirty " [DIRTY]"
 
 alias ga "git add ."
