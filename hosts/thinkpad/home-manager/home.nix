@@ -17,8 +17,10 @@
    home.file = { 
    ".config/fish/config.fish" = { text = (builtins.readFile ../../../configs/fish/config.fish); executable = false; };
    ".config/ghostty/config" = { text = (builtins.readFile ../../../configs/ghostty/config); executable = false; };
+    # Nvim
    ".config/nvim/init.lua" = { text = (builtins.readFile ../../../configs/nvim/init.lua); executable = false; };
    ".config/nvim/lua/plugins/cat.lua" = { text = (builtins.readFile ../../../configs/nvim/cat.lua); executable = false; };
+   ".config/nvim/lua/plugins/astroui.lua" = { text = (builtins.readFile ../../../configs/nvim/cat_theme.lua.lua); executable = false; };
    };
 
    dconf.settings = {
