@@ -17,6 +17,7 @@
    home.file = { 
    ".config/fish/config.fish" = { text = (builtins.readFile ../../../configs/fish/config.fish); executable = false; };
    ".config/ghostty/config" = { text = (builtins.readFile ../../../configs/ghostty/config); executable = false; };
+   ".config/nvim/init.lua" = { text = (builtins.readFile ../../../configs/nvim/init.lua); executable = false; };
    };
 
    dconf.settings = {
