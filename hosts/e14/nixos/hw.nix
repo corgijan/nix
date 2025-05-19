@@ -26,36 +26,6 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/var/lib/docker/overlay2/720c5358aa4948965f82b61b9e8c2bd1753147e96fe10287956f0f9f7f6c8044/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
-  fileSystems."/var/lib/docker/overlay2/66efdfe15f8b101c59bdb016fbee7ee40ba3b48d0773981a23d7e6c873217399/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
-  fileSystems."/var/lib/docker/overlay2/847a5fd6d8c3bf1b22b4d422bd6cd7a151691c36c8c2ad65a9c876b2d9364f95/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
-  fileSystems."/var/lib/docker/overlay2/034449852ebd384998690b59970b5f811a1959295d2d63341be3113b203eb557/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
-  fileSystems."/var/lib/docker/overlay2/792ae60985d6447a9af7dea20f7e6332ebb822f6f35ed5eed04fa1a8ba6700ac/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
-  fileSystems."/var/lib/docker/overlay2/921ddc3f621d7ffeed9f67b143a865aa8e3a462979e09f9bad68952802699ed1/merged" =
-    { device = "overlay";
-      fsType = "overlay";
-    };
-
   swapDevices =
     [ { device = "/dev/disk/by-uuid/77fa1870-8fc7-4bf3-aeb7-dc6be86f2bff"; }
     ];

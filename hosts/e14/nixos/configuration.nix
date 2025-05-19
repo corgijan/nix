@@ -20,13 +20,16 @@
     enable = true;
   };
 
-
+ hardware.firmware = [
+  pkgs.linux-firmware
+ ];
  environment.systemPackages = with pkgs-unstable; [
     htop # Example package from unstable branch
     k9s
     jetbrains.rust-rover
     jetbrains.idea-ultimate
-    (pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
+    jetbrains.pycharm-professional
+    #(pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
     spotify
     jetbrains-mono
     #zed-editor-fhs
@@ -52,7 +55,7 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
