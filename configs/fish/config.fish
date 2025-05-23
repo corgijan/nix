@@ -12,6 +12,7 @@ alias rm "trash"
 alias v "vi"
 alias r "ranger"
 alias g "grep"
+abbr nfu "nix flake update"
 set --universal pure_symbol_git_dirty " [DIRTY]"
 
 alias ga "git add ."
