@@ -3,14 +3,15 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # More under: https://nixos-and-flakes.thiscute.world/nixos-with-flakes/downgrade-or-upgrade-packages
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     flake-zen.url = "github:0xc000022070/zen-browser-flake";
     flake-zen.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   };
@@ -19,6 +20,7 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
+    nixpkgs-stable,
     home-manager,
     flake-zen,
     ...
@@ -38,7 +40,8 @@
         inherit inputs outputs;
         };
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix
+        modules = [
+          ./nixos/configuration.nix
         ];
       };
     };
