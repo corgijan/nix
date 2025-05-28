@@ -145,8 +145,32 @@
     #  thunderbird
     ];
   };
-
   users.extraGroups.docker.members = [ "jan" ];
+
+  # here hibernate is enabled
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 32 * 1024; # 32GB in MB
+    }
+  ];
+
+  # find via https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate
+  boot.kernelParams = ["resume_offset=82143232"];
+  
+  # this is custom value https://nixos.wiki/wiki/Hibernation
+  boot.resumeDevice = "/dev/disk/by-uuid/5450e970-b913-4e38-8783-2358111e5ef4";
+
+  powerManagement.enable = true;
+
+  services.logind.lidSwitch = "suspend-then-hibernate";
+
+  # Define time delay for hibernation
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=10m
+    SuspendState=mem
+  '';
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

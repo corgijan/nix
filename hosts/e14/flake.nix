@@ -2,10 +2,12 @@
   description = "Your new nix config";
 
   inputs = {
-    # Nixpkgs
+    # Nixos base version
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # More under: https://nixos-and-flakes.thiscute.world/nixos-with-flakes/downgrade-or-upgrade-packages
+    # Unstable
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Stable
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     flake-zen.url = "github:0xc000022070/zen-browser-flake";
     flake-zen.inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -37,9 +39,13 @@
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
+        pkgs-stable = import nixpkgs-stable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
         inherit inputs outputs;
         };
-        # > Our main nixos configuration file <
+        # > The main nixos configuration file <
         modules = [
           ./nixos/configuration.nix
         ];
