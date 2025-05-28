@@ -36,6 +36,7 @@ config = mkIf cfg.enable {
   vdhcoapp
   wl-clipboard
   obsidian
+  brave
  ];
 
   systemd.services.flatpak-repo = {
