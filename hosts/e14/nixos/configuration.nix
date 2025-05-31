@@ -55,7 +55,7 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.docker.enable = false;
+  virtualisation.docker.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -86,8 +86,7 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
+  services = {
     displayManager.gdm = {
       enable = true;
       wayland = true;
@@ -147,6 +146,7 @@
   };
   users.extraGroups.docker.members = [ "jan" ];
 
+
   # here hibernate is enabled
   swapDevices = [
     {
@@ -157,7 +157,6 @@
 
   # find via https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate
   boot.kernelParams = ["resume_offset=82143232"];
-  
   # this is custom value https://nixos.wiki/wiki/Hibernation
   boot.resumeDevice = "/dev/disk/by-uuid/5450e970-b913-4e38-8783-2358111e5ef4";
 
