@@ -29,11 +29,12 @@
     jetbrains.rust-rover
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
-    #(pkgs.jetbrains.plugins.addPlugins pkgs.jetbrains.pycharm-professional ["github-copilot"])
+    #(pkgs-stable.jetbrains.plugins.addPlugins pkgs-stable.jetbrains.pycharm-professional ["github-copilot"])
     spotify
     jetbrains-mono
     #zed-editor-fhs
   ];
+
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
