@@ -10,6 +10,7 @@
       ./bootloader.nix
       ../../../modules/packages.nix
       ../../../modules/desktop_packages.nix
+      ./hibernate.nix
     ];
 
   basepkgs = {
@@ -167,7 +168,7 @@
 
   # Define time delay for hibernation
   systemd.sleep.extraConfig = ''
-    HibernateDelaySec=10m
+    HibernateDelaySec=30s
     SuspendState=mem
   '';
 
