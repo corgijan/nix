@@ -167,6 +167,7 @@
   services.logind.lidSwitch = "suspend-then-hibernate";
 
   # Define time delay for hibernation
+  # Doesnt seem to work? 
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=30s
     SuspendState=mem
