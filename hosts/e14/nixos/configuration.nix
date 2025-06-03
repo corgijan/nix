@@ -36,6 +36,12 @@
     #zed-editor-fhs
   ];
 
+  programs.nh  = {
+    enable = true;
+    flake = "~/nix/hosts/e14";
+    clean.extraArgs = "--keep 5 --keep-since 3d";
+  };
+
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
