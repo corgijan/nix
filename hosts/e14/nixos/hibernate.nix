@@ -1,7 +1,7 @@
 # shamelessly stolen from https://gist.github.com/mattdenner/befcf099f5cfcc06ea04dcdd4969a221
 { config, pkgs, ... }: let
   hibernateEnvironment = {
-    HIBERNATE_SECONDS = "600";
+    HIBERNATE_SECONDS = "1200";
     HIBERNATE_LOCK = "/var/run/autohibernate.lock";
   };
 in {

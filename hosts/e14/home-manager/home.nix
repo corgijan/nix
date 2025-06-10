@@ -126,11 +126,17 @@
     enable = true;
     userName = "corgijan";
     userEmail = "jan.vaorin@tu-dortmund.de";
+
+
+    
     aliases = {
       undo = "reset HEAD~1 --mixed";
       amend = "commit -a --amend";
     };
     extraConfig = {
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
       init.defaultBranch = "development";
       pull = {
         rebase = true;
