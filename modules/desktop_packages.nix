@@ -37,6 +37,8 @@ config = mkIf cfg.enable {
   wl-clipboard
   obsidian
   brave
+  foot
+  gnome-console
  ];
 
   systemd.services.flatpak-repo = {
