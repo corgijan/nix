@@ -32,7 +32,6 @@ config = mkIf cfg.enable {
   ardour
   ranger
   signal-desktop
-  awscli2
   vdhcoapp
   wl-clipboard
   obsidian
