@@ -38,6 +38,7 @@ config = mkIf cfg.enable {
   brave
   foot
   gnome-console
+  tldr
  ];
 
   systemd.services.flatpak-repo = {
