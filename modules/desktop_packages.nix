@@ -32,7 +32,6 @@ config = mkIf cfg.enable {
   ardour
   ranger
   signal-desktop
-  vdhcoapp
   wl-clipboard
   obsidian
   brave

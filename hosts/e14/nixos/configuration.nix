@@ -28,8 +28,8 @@
     htop # Example package from unstable branch
     k9s
     jetbrains.rust-rover
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
+    jetbrains.idea
+    jetbrains.pycharm 
     #(pkgs-stable.jetbrains.plugins.addPlugins pkgs-stable.jetbrains.pycharm-professional ["github-copilot"])
     spotify
     jetbrains-mono
