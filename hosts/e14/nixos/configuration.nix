@@ -174,10 +174,18 @@
 
   # Define time delay for hibernation
   # Doesnt seem to work? 
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=1200s
-    SuspendState=mem
-  '';
+  systemd.sleep.settings = {
+  Sleep = {
+    HibernateDelaySec = "1200s";
+    SuspendState = "mem";
+  };
+};
+
+services.openssh = {
+  enable = true;
+};
+
+networking.firewall.allowedTCPPorts = [ 22 ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
