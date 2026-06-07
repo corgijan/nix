@@ -33,6 +33,9 @@ config = mkIf cfg.enable {
   ranger
   signal-desktop
   wl-clipboard
+  github-copilot-intellij-agent
+  screen
+  skopeo
   obsidian
   brave
   foot
