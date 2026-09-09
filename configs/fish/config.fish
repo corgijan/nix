@@ -7,6 +7,8 @@ end
 export EDITOR="nvim"
 export TERM="xterm-256color"
 
+mise activate fish | source
+
 set fish_greeting "Its fishy here ...."
 alias rm "trash"
 alias v "vi"

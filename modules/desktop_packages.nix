@@ -37,6 +37,7 @@ config = mkIf cfg.enable {
   screen
   skopeo
   claude-code
+  mise
 
   obsidian
   brave
