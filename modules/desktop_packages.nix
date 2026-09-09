@@ -36,6 +36,8 @@ config = mkIf cfg.enable {
   github-copilot-intellij-agent
   screen
   skopeo
+  claude-code
+
   obsidian
   brave
   foot

@@ -8,7 +8,7 @@
     # Unstable
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Stable
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     flake-zen.url = "github:0xc000022070/zen-browser-flake";
     flake-zen.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
