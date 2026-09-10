@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "Corgijans Nix System";
 
   inputs = {
     # Nixos base version

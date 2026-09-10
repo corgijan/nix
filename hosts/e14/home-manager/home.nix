@@ -14,15 +14,9 @@
    	EDITOR = "nvim";
    };
 
-   home.file = { 
+   home.file = {
    ".config/fish/config.fish" = { text = (builtins.readFile ../../../configs/fish/config.fish); executable = false; };
    ".config/ghostty/config" = { text = (builtins.readFile ../../../configs/ghostty/config); executable = false; };
-    # Nvim
-   #".config/nvim/init.lua" = { text = (builtins.readFile ../../../configs/nvim/init.lua); executable = false; };
-   ".config/nvim" = { 
-    source = ../../../configs/nvim-complete/nvim;
-    recursive = true;
-   };
    };
 
    dconf.settings = {
@@ -35,17 +29,9 @@
  	"org/gnome/desktop/wm/preferences" = {
       		button-layout = "close:";
     	};
-	
     "org/gnome/shell" = {
+      always-show-log-out = true;
       disable-user-extensions = false;
-      # `gnome-extensions list` for a list
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-	      "fullscreen-to-empty-workspace2@corgijan.dev"
-	      "caffeine@patapon.info"
-	      "blur-my-shell@aunetx"
-	      "clipboard-history@alexsaveau.dev"
-      ];
     };
 
     "org/gnome/shell" = {

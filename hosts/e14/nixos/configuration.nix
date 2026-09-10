@@ -11,6 +11,7 @@
       ../../../modules/packages.nix
       ../../../modules/desktop_packages.nix
       ./hibernate.nix
+      ./sway.nix
     ];
 
   basepkgs = {
@@ -38,7 +39,7 @@
 
   programs.nh  = {
     enable = true;
-    flake = "~/nix/hosts/e14";
+    flake = "/home/jan/nix/hosts/e14";
     clean.extraArgs = "--keep 5 --keep-since 3d";
   };
 
