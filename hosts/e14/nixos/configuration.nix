@@ -35,6 +35,7 @@
     spotify
     jetbrains-mono
     #zed-editor-fhs
+    inputs.nix-alien.packages."x86_64-linux".nix-alien
   ];
 
   programs.nh  = {

@@ -11,6 +11,8 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     flake-zen.url = "github:0xc000022070/zen-browser-flake";
     flake-zen.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-alien.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
@@ -25,6 +27,7 @@
     nixpkgs-stable,
     home-manager,
     flake-zen,
+    nix-alien,
     ...
   } @ inputs: let
     inherit (self) outputs;
