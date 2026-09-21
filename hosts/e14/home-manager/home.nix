@@ -34,14 +34,6 @@
       disable-user-extensions = false;
     };
 
-    "org/gnome/shell" = {
-      favorite-apps = [
-	      "app.zen_browser.zen.desktop"
-        "org.gnome.Nautilus.desktop"
-	      "com.mitchellh.ghostty.desktop"
-      ];
-    };
-
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
@@ -108,28 +100,23 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-    programs.git = {
+  programs.git = {
     enable = true;
-    userName = "corgijan";
-    userEmail = "jan.vaorin@tu-dortmund.de";
-
-
-    
-    aliases = {
-      undo = "reset HEAD~1 --mixed";
-      amend = "commit -a --amend";
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "corgijan";
+        email = "jan.vaorin@tu-dortmund.de";
+        signingKey = "~/.ssh/id_ed25519.pub";
+      };
+      alias = {
+        undo = "reset HEAD~1 --mixed";
+        amend = "commit -a --amend";
+      };
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/id_ed25519.pub";
       init.defaultBranch = "development";
-      pull = {
-        rebase = true;
-      };
-      branch = {
-        autosetupmerge = true;
-      };
+      pull.rebase = true;
+      branch.autosetupmerge = true;
     };
   };
 
