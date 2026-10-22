@@ -171,10 +171,11 @@
 
   powerManagement.enable = true;
 
-  services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.settings.Login.HandleLidSwitch = "suspend-then-hibernate";
 
-  # Define time delay for hibernation
-  # Doesnt seem to work? 
+  # Upper bound on time spent suspended before hibernating.
+  # On battery, logind also arms an ACPI _BTP low-battery alarm and hibernates
+  # on whichever fires first, so hibernation can happen sooner than this.
   systemd.sleep.settings = {
   Sleep = {
     HibernateDelaySec = "1200s";
