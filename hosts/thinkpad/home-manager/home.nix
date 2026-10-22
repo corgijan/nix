@@ -14,15 +14,10 @@
    	EDITOR = "nvim";
    };
 
-   home.file = { 
+   home.file = {
    ".config/fish/config.fish" = { text = (builtins.readFile ../../../configs/fish/config.fish); executable = false; };
    ".config/ghostty/config" = { text = (builtins.readFile ../../../configs/ghostty/config); executable = false; };
-    # Nvim
-   #".config/nvim/init.lua" = { text = (builtins.readFile ../../../configs/nvim/init.lua); executable = false; };
-   ".config/nvim" = { 
-    source = ../../../configs/nvim-complete/nvim;
-    recursive = true;
-   };
+   # Nvim is managed manually (AstroNvim), not by home-manager
    };
 
    dconf.settings = {
@@ -38,14 +33,7 @@
 	
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      # `gnome-extensions list` for a list
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-	      "fullscreen-to-empty-workspace2@corgijan.dev"
-	      "caffeine@patapon.info"
-	      "blur-my-shell@aunetx"
-	      "clipboard-history@alexsaveau.dev"
-      ];
+      # Extensions are managed manually via the Extensions app
     };
 
     "org/gnome/shell" = {

@@ -29,11 +29,9 @@ config = mkIf cfg.enable {
   opentofu
   terragrunt
   talosctl
-  ardour
   ranger
   signal-desktop
   wl-clipboard
-  github-copilot-intellij-agent
   screen
   skopeo
   claude-code
@@ -41,9 +39,9 @@ config = mkIf cfg.enable {
 
   obsidian
   brave
-  foot
   gnome-console
   tldr
+  devenv
  ];
 
   systemd.services.flatpak-repo = {
